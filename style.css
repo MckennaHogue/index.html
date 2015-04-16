@@ -1,0 +1,139 @@
+body {
+  padding: 0;
+  margin: 0;
+
+}
+
+
+#game {
+  position: relative;
+  display: inline-block;
+  width: 1590px;
+  height: 700px;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+
+#gun1{
+width: auto;
+height: 100px;
+}
+
+#gun2{
+width: auto;
+height: 100px;
+}
+
+#gun3{
+width: 300;
+height: 300px;
+}
+
+#suits div{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+#bluesuit{
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+#greensuit{
+  position: relative;
+  width: 200px;
+  height: 400px;
+}
+
+#brownsuit{
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+/*#container{
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  width: 1210px;
+  height: 700px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+#gamenav{
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 700px;
+}*/
+
+h1{
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 160px;
+}
+
+h2{
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 300;
+
+}
+
+#keys{
+  position: absolute;
+  left: 175px;
+  top: 158px;
+  width: 25px;
+}
+
+
+#sky{
+/*position: absolute;*/
+background-image: url("assets/underwater.jpg");
+top: 0%;
+height: 100%;
+width: 100%;
+}
+
+#water{
+position: absolute;
+background-image: url("assets/underwater.jpg");
+top: 30%;
+height: 100%;
+width: 100%;
+}
+
+#Boat{
+  position: absolute;
+  left: 90px;
+  top: 10px;
+  width: 500px;
+}
+
+#diver{
+  position: absolute;
+  left: 200px;
+  top: 400px;
+  width: 200px;
+}
+
+#gun{
+  position: absolute;
+  left: 250px;
+  top: 522px;
+  width: 200px;
+}
+
+
+.fish{
+  width: 8%;
+  position: absolute;
+}
+

@@ -1,0 +1,52 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="guns">
+      <img src="assets/spear.png" alt="spear" id="gun2" class="spear">
+      <img src="assets/spear.jpg" alt="spear" id="gun1" class="spear">
+      <img src="assets/gun.png" alt="spear" id="gun3" class="spear">
+    </div>
+
+    <div id="suits">
+      <img src="assets/bluesuit.png" alt="spear"id="bluesuit" class="blue">
+      <img src="assets/greensuit.jpg" alt="spear" id="greensuit" class="green">
+      <img src="assets/brownsuit.png" alt="spear" id="brownsuit" class="brown">
+    </div>
+
+    <a href="index.html" id="link"><h1>PLAY!</h1></a>
+
+    <script type="text/javascript">
+
+
+      $(document).ready(function(){
+        console.log("ready!");
+
+        var suitType = "1";
+        var spearType = "1";
+
+        $("#guns img").on("click", function(){
+            spearType = this.id;
+            console.log("spearType: "+spearType);
+            console.log("this id: "+this.id);
+            $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
+        })
+
+
+        $("#suits div").on("click", function(){
+            suitType = this.id;
+            console.log("suitType: "+suitType);
+            console.log("this id: "+this.id);
+            $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
+        })
+
+
+        // $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
+      })
+    </script>
+
+  </body>
+</html>
