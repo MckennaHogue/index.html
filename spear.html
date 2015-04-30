@@ -6,13 +6,13 @@
 
   <body>
     <div id="guns">
-      <img src="assets/spear.png" alt="spear" id="gun2" class="spear">
-      <img src="assets/spear.jpg" alt="spear" id="gun1" class="spear">
-      <img src="assets/gun.png" alt="spear" id="gun3" class="spear">
+      <img src="assets/spear1.png" alt="spear" id="gun1" class="spear active">
+      <img src="assets/spear2.png" alt="spear" id="gun2" class="spear">
+      <img src="assets/spear3.png" alt="spear" id="gun3" class="spear">
     </div>
 
     <div id="suits">
-      <img src="assets/bluesuit.png" alt="spear"id="bluesuit" class="blue">
+      <img src="assets/bluesuit.png" alt="spear"id="bluesuit" class="blue active">
       <img src="assets/greensuit.jpg" alt="spear" id="greensuit" class="green">
       <img src="assets/brownsuit.png" alt="spear" id="brownsuit" class="brown">
     </div>
@@ -25,21 +25,25 @@
       $(document).ready(function(){
         console.log("ready!");
 
-        var suitType = "1";
-        var spearType = "1";
+        var suitType = "bluesuit";
+        var spearType = "gun1";
 
         $("#guns img").on("click", function(){
+            $("#guns img").removeClass("active");
             spearType = this.id;
             console.log("spearType: "+spearType);
             console.log("this id: "+this.id);
+            $("#"+this.id).addClass("active");
             $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
         })
 
 
-        $("#suits div").on("click", function(){
+        $("#suits img").on("click", function(){
+          $("#suits img").removeClass("active");
             suitType = this.id;
             console.log("suitType: "+suitType);
             console.log("this id: "+this.id);
+            $("#"+this.id).addClass("active");
             $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
         })
 

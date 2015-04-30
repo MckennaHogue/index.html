@@ -8,7 +8,7 @@ body {
 #game {
   position: relative;
   display: inline-block;
-  width: 1590px;
+  width: 100%;
   height: 700px;
   overflow: hidden;
   cursor: crosshair;
@@ -120,8 +120,8 @@ width: 100%;
 #diver{
   position: absolute;
   left: 200px;
-  top: 400px;
-  width: 200px;
+  top: 600px;
+  width: 400px;
 }
 
 #gun{
@@ -133,7 +133,23 @@ width: 100%;
 
 
 .fish{
-  width: 8%;
+  width: 75px;
   position: absolute;
 }
 
+
+/**********************************spear***/
+
+#guns img,
+#suits img{
+  width: 200px;
+  height:auto;
+  vertical-align:middle;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+#guns img.active,
+#suits img.active{
+  border:2px solid red;
+}

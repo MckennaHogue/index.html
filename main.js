@@ -1,105 +1,3 @@
-
-// var xPos= 200;
-// var yPos= 400;
-// var waterSurface = 210;
-// var waterFloor = 600;
-// var fishCount=0;
-
-// for(var fc = 0;  fc<10; fc++){
-//   drawFish(Math.random()*800);
-// }
-
-// function drawFish(xPosition){
-//   fishCount++;
-//   // var fishxPos= Math.random()*800;
-//   var fishyPos= 200+Math.random()*450;
-//   $("#game").append ('<img src="assets/fish1.gif" alt="fish" id="fish'+fishCount+'" class="fish">');
-//   $("#fish"+fishCount).css({  "top":fishyPos+"px", "left": xPosition+ "px"});
-//   swimleft("#fish"+fishCount, xPosition);
-//   console.log('x');
-// }
-
-// setInterval( function(){
-//   drawFish(0);
-// }, Math.random() *10000);
-
-// function swimleft(fish, fishPos){
-//   for(var x=0; x<1000; x++){
-//     fishPos+=10;
-//     $(fish).animate({"left": fishPos+"px"});
-//   }
-// }
-
-// $(document).keydown(function(e) {
-//   switch(e.which){
-//     case 37://left
-//     console.log("left");
-//     xPos-=10;
-//     //xpos=xpos-10
-//     break;
-
-//     case 39: //right
-//      xPos+=10;
-//     //xpos=xpos+10
-//     console.log("right");
-//     break;
-
-//     case 38://up
-//     yPos-=10;
-//     console.log("up");
-//     break;
-
-//     case 40: //down
-//     yPos+=10;
-//     console.log("down");
-//     break;
-
-//     default: return;
-//   }
-//   e.preventDefault();
-
-//   if(yPos < waterSurface){
-//     yPos = waterSurface;
-//   }
-
-//   if(yPos >waterFloor){
-//     yPos = waterFloor;
-//   }
-
-
-
-//   console.log("xPos:"+xPos+"  yPos:" + yPos);
-
-//   $("#diver").css({  "top":yPos+"px", "left": xPos+ "px"});
-// });
-
-
-
-
-// /*
-
-
-// // simulation
-// collection of fish (array)
-// start by making multiple fish and giving them random positions (populating an array)
-
-// for each item in the array - create an html element for the fish and set its position
-
-// diver
-// x
-// y
-
-
-// // representation / interface
-// render loop - runs every 60th of a second
-//   loop through all the fish and update their positions
-//   update the divers position
-
-
-// */
-
-
-
 /* Global Variables */
 
 var $game = $('#game')
@@ -117,6 +15,7 @@ var makeFish = function(startingX, startingY, startingSpeed){
    };
 };
 
+/* drawing weapons suit*/
 var vars = [], hash;
 //get url: "file:///Users/roxysurfgirl/Desktop/java/domain-research/mock-ups/html/spearfish/index.html?spear=gun1&suit=red"
 //spilts url into two pieces, after the "?"
@@ -134,26 +33,36 @@ if(q != undefined){
     }
 }
 
-
+var diverImage;
 //find value of "spear" from above array, and save to variable
 var spear = vars["spear"];
-// console.log("spear type = " + spear);
+console.log("spear type = " + spear);
 var suit = vars["suit"];
-// console.log("suit color = " + suit);
+console.log("suit color = " + suit);
 
-if(spear =="gun1"){
-  //change the css for the gun to whichever image you want
-  $("#gun").attr("src", "assets/keys.png");
-}else if(spear =="gun2"){
-  //change the css for the gun to whichever image you want
-  // $("#gun").attr("src", "assets/spear1.jpg");
-}else if(spear =="gun3"){
-  //change the css for the gun to whichever image you want
-  // $("#gun").attr("src", "assets/spear2.jpg");
+if(suit=="bluesuit" && spear == "gun1"){
+  diverImage="assets/diver.png";
+}else if(suit=="brownsuit" && spear =="gun1"){
+ diverImage="assets/Diverbrown.png";
+}else if(suit=="greensuit" && spear =="gun1"){
+ diverImage="assets/Divergreen.png";
+}else if(suit=="bluesuit" && spear == "gun2"){
+  diverImage="assets/diver.png";
+}else if(suit=="brownsuit" && spear =="gun2"){
+ diverImage="assets/Diverbrown.png";
+}else if(suit=="greensuit" && spear =="gun2"){
+ diverImage="assets/Divergreen.png";
+}else if(suit=="bluesuit" && spear == "gun3"){
+  diverImage="assets/diver.png";
+}else if(suit=="brownsuit" && spear =="gun3"){
+ diverImage="assets/Diverbrown.png";
+}else if(suit=="greensuit" && spear =="gun3"){
+ diverImage="assets/Divergreen.png";
+}else{
+  diverImage="assets/diver.png";
 }
 
-// same as above for diver images
-
+diver.attr("src",diverImage);
 
 //IN HTML
 //put diver and spear in same div
@@ -163,7 +72,7 @@ if(spear =="gun1"){
 var schoolOfFish = [];
 
 for(var fc = 0; fc < 10; fc++){ // Adding 10 fish to schoolOfFish
-  var fish = makeFish(Math.random()*300, Math.random()*300, Math.random()*10); // x, y, speed
+  var fish = makeFish(Math.random()*300, Math.random()*500 + 205, Math.random()*10); // x, y, speed
   schoolOfFish.push(fish);
 }
 
@@ -247,12 +156,7 @@ setInterval(function(){
 
     // if(currentFish.x >1590) {
     //   console.log("kill the fish");
-
-
   }
-
-  /* Update Diver */
-  // TODO
 
   //var diverDiv = $("#diverDiv");
   //diverDiv.css
@@ -261,16 +165,3 @@ setInterval(function(){
 
 
 }, 16);
-
-
-//  For over spring break =
-//      make fish die after leave screen not go on forever
-//      add a sound maybe when fish get to the end of the page
-//      work on style of the page id: the directions, maybe making the game the whole page and directions up top
-//      document diver position? like how he did the fish?
-
-//    PLAY GAMES: think about how one key for the whole game/also never ending game.
-//    https://itunes.apple.com/us/app/desert-golfing/id902062673?mt=
-//    http://www.adamatomic.com/canabalt/
-
-// margine auto means it automatically goes in the center
