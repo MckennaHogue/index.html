@@ -158,16 +158,18 @@ width: 100%;
   position: fixed;
   top: 100px;
   left: 100px;
-  background:  rgba(255,255,255,0.6);
+  background:  rgba(255,255,255,0.9);
 
 }
 
 #fishfactbox p{
-  padding: 10px;
+  padding-left: 10px;
   width: 600px;
 }
 
 #fishfactbox h1{
-  padding: 10px;
+  padding-left: 10px;
   width: 800px;
 }
+
+
