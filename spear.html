@@ -1,27 +1,61 @@
 <html>
-  <head>
-        <title> Spearfishing</title>
-        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  </head>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
 
-  <body>
-        <div id="game">
-            <img src="assets/sky.jpg" alt="sky" id="sky" class="sky">
-            <div class =  "text">
-                <h2> To move the position of you gun press down on the diver with your clicker and drag the angle you want you gun to be at!</h2>
-            </div>
+<body>
+  <div id="choicecontainer">
+    <h1> Choose a gun and wetsuit for your diver.</h1>
+    <h1>When you're done, press start to enter the spearfishing learning experience!</h1>
+      <div id="guns">
+        <img src="assets/spear1.png" alt="spear" id="gun1" class="spear active">
+        <img src="assets/spear2.png" alt="spear" id="gun2" class="spear">
+        <img src="assets/spear3.png" alt="spear" id="gun3" class="spear">
+      </div>
+
+      <div id="suits">
+        <img src="assets/bluesuit.png" alt="spear"id="bluesuit" class="blue active">
+        <img src="assets/greensuit.jpg" alt="spear" id="greensuit" class="green">
+        <img src="assets/brownsuit.png" alt="spear" id="brownsuit" class="brown">
+      </div>
+
+      <a href="index.html" id="link"><h1>PLAY!</h1></a>
+  </div>
+
+    <script type="text/javascript">
 
 
-            <a href= "spear.html"><img src="assets/Boat.png" alt="boat" id="Boat" class="Boat"></a>
-            <div id="water"></div>
-            <img src="assets/Diver.png" alt="diver" id="diver">
+      $(document).ready(function(){
+        console.log("ready!");
 
-        </div>
-        <div id='fishfactbox'></div>
+        var suitType = "bluesuit";
+        var spearType = "gun1";
 
-        <script src="main.js"></script>
+        $("#guns img").on("click", function(){
+            $("#guns img").removeClass("active");
+            spearType = this.id;
+            console.log("spearType: "+spearType);
+            console.log("this id: "+this.id);
+            $("#"+this.id).addClass("active");
+            $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
+        })
+
+
+        $("#suits img").on("click", function(){
+            $("#suits img").removeClass("active");
+            suitType = this.id;
+            console.log("suitType: "+suitType);
+            console.log("this id: "+this.id);
+            $("#"+this.id).addClass("active");
+            $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
+        })
+
+
+        // $("#link").attr("href", "index.html?spear="+spearType+"&suit="+suitType);
+      })
+    </script>
+
   </body>
-
 </html>
