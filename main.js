@@ -60,7 +60,7 @@ var suit = vars["suit"];
 // console.log("suit color = " + suit);
 
 if(suit=="bluesuit" && spear=="gun1"){
-  diverImage="assets/diver.png";
+  diverImage="assets/Diver.png";
 }else if(suit=="brownsuit" && spear=="gun1"){
   diverImage="assets/Diverbrown.png";
 }else if(suit=="greensuit" && spear=="gun1"){
@@ -72,13 +72,13 @@ if(suit=="bluesuit" && spear=="gun1"){
 }else if(suit=="greensuit" && spear=="gun2"){
   diverImage="assets/Divergreen.png";
 }else if(suit=="bluesuit" && spear=="gun3"){
-  diverImage="assets/diver.png";
+  diverImage="assets/Diver.png";
 }else if(suit=="brownsuit" && spear=="gun3"){
   diverImage="assets/Diverbrown.png";
 }else if(suit=="greensuit" && spear=="gun3"){
   diverImage="assets/Divergreen.png";
 }else{
-  diverImage="assets/diver.png";
+  diverImage="assets/Diver.png";
 }
 
 
