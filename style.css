@@ -1,19 +1,29 @@
+
+
+/*********************************************** UNIVERSAL */
+
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 160px;
+}
+
+h2{
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 300;
 
 }
 
-
-#game {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 700px;
-  overflow: hidden;
-  cursor: crosshair;
-}
-
+/*********************************************** SPEAR.HTML */
 
 #gun1{
 width: auto;
@@ -36,6 +46,26 @@ height: 300px;
   display: inline-block;
 }
 
+#suits img#greensuit{
+  width: 100px;
+}
+
+#link{
+  text-decoration: none;
+  color: black;
+  width: 250px;
+}
+
+#link h1{
+  font-size: 100;
+  width: 250px;
+  /*margin: 0 auto;*/
+}
+
+#link:hover{
+  color: red;
+}
+
 #bluesuit{
   position: relative;
   width: 400px;
@@ -54,36 +84,19 @@ height: 300px;
   height: 400px;
 }
 
-/*#container{
-  font-family: 'Oswald', sans-serif;
-  position: relative;
-  width: 1210px;
-  height: 700px;
-  margin: 10px;
-  margin-top: 50px;
+#choicecontainer{
+  margin: 0 auto;
+  width: 900px;
 }
 
-#gamenav{
-  vertical-align: top;
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  height: 700px;
-}*/
-
-h1{
-  font-size: 30px;
-  margin-left: 10px;
-  margin-top: 10px;
-  width: 160px;
+#choicecontainer h1{
+  margin-top: 20px;
 }
 
-h2{
-  font-size: 15px;
-  margin-left: 10px;
-  margin-top: 10px;
-  font-weight: 300;
-
+#choicecontainer h1{
+  width: 700px;
+  font-weight: medium;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #keys{
@@ -93,21 +106,31 @@ h2{
   width: 25px;
 }
 
+/********************************** INDEX.HTML ***/
+
+#game {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  cursor: crosshair;
+}
 
 #sky{
-/*position: absolute;*/
-background-image: url("assets/underwater.jpg");
-top: 0%;
-height: 100%;
-width: 100%;
+  /*position: absolute;*/
+  background-image: url("assets/underwater.jpg");
+  top: 0%;
+  height: 100%;
+  width: 100%;
 }
 
 #water{
-position: absolute;
-background-image: url("assets/underwater.jpg");
-top: 30%;
-height: 100%;
-width: 100%;
+  position: absolute;
+  background-image: url("assets/underwater.jpg");
+  top: 30%;
+  height: 100%;
+  width: 100%;
 }
 
 #Boat{
@@ -131,14 +154,10 @@ width: 100%;
   width: 200px;
 }
 
-
 .fish{
   width: 75px;
   position: absolute;
 }
-
-
-/**********************************spear***/
 
 #guns img,
 #suits img{
@@ -165,6 +184,7 @@ width: 100%;
 #fishfactbox p{
   padding-left: 10px;
   width: 600px;
+  font-weight:
 }
 
 #fishfactbox h1{
